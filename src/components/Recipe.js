@@ -13,28 +13,36 @@ const Recipe = () => {
 
     const url = `https://www.themealdb.com/api/json/v1/1/search.php?s=${search}`
 
+
     useEffect(() => {
-        getRecipes()
+        let mounted = true
+
+        const loadData = async () => {
+            const { data } = await axios.get(url)
+            if (mounted) {
+                setFood(data.meals)
+            }
+        }
+        loadData()
+        return () => {
+            mounted = false
+        }
     }, [search])
 
 
-    const getRecipes = async () => {
-        const { data } = await axios.get(url)
-        setFood(data.meals)
-    }
 
     return (
         <>
             <input type="text" onChange={e => setSearch(e.target.value)} />
 
-            <div className='recipe-cards container'>
+
+            {console.log(food)}
+            {food ? <div className='recipe-cards container'>
                 {food.map(recipe => (
-
                     <RecipeCard key={recipe.idMeal} recipe={recipe} />
-
-
                 ))}
-            </div>
+            </div> :
+                'please type the correct food name'}
         </>
     )
 }
