@@ -10,11 +10,11 @@ function App() {
   return (
     <>
 
-      <div className="wrapper">
-        <h2 className='app-title'>React recipe app</h2>
-        <Recipe />
 
-      </div>
+      <h2 className='app-title'>React recipe app</h2>
+      <Recipe />
+
+
     </>
   );
 }

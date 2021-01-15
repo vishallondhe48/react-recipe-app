@@ -1,6 +1,15 @@
+.search-box {
+    display: grid;
+    place-items: center;
+    input {
+        width: 300px;
+        padding: 0.5rem;
+    }
+}
 .recipe-cards {
-    display: flex;
-    flex-wrap: wrap;
-
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+    list-style: none;
+    padding: 2rem 0;
 }

@@ -33,16 +33,22 @@ const Recipe = () => {
 
     return (
         <>
-            <input type="text" onChange={e => setSearch(e.target.value)} />
 
+            <div className="search-box">
+                <input type="text" onChange={e => setSearch(e.target.value)} />
+            </div>
 
             {console.log(food)}
-            {food ? <div className='recipe-cards container'>
-                {food.map(recipe => (
-                    <RecipeCard key={recipe.idMeal} recipe={recipe} />
-                ))}
-            </div> :
-                'please type the correct food name'}
+            <div className='recipe-cards container'>
+                {food ?
+
+                    food.map(recipe => (
+                        <RecipeCard key={recipe.idMeal} recipe={recipe} />
+                    ))
+
+                    :
+                    'please type the correct food name'}
+            </div>
         </>
     )
 }

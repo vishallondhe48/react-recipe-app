@@ -4,10 +4,18 @@ import './RecipeCard.scss'
 const RecipeCard = ({ recipe }) => {
     return (
         <>
+
             <div className="recipe-card">
 
-                <img src={`${recipe.strMealThumb}`} width={350} alt="" />
-                <h2 className='title'>{recipe.strMeal}</h2>
+
+                <figure>
+                    <img src={`${recipe.strMealThumb}`} alt="" />
+                </figure>
+
+                <h2 className='title'>{recipe.strMeal}
+                </h2>
+
+
             </div>
         </>
     )
