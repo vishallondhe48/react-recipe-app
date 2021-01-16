@@ -38,7 +38,6 @@ const Recipe = () => {
                 <input type="text" onChange={e => setSearch(e.target.value)} />
             </div>
 
-            {console.log(food)}
             <div className='recipe-cards container'>
                 {food ?
 
