@@ -3,7 +3,7 @@ import './App.scss';
 import axios from 'axios'
 import FoodRecipe from './components/FoodRecipe'
 import Recipe from './components/Recipe'
-
+import Footer from './components/Footer'
 import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 
@@ -18,7 +18,7 @@ function App() {
         <Route path='/:id' component={FoodRecipe} />
 
       </Router>
-
+      <Footer />
     </>
   );
 }

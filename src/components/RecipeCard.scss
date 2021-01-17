@@ -13,4 +13,8 @@
         padding: 0.5rem 0;
         text-align: center;
     }
+    &:hover {
+        transform: scale(1.1);
+        transition: 0.3s ease-in-out;
+    }
 }

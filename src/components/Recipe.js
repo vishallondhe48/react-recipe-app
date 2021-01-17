@@ -42,7 +42,7 @@ const Recipe = () => {
                 {food ?
 
                     food.map(recipe => (
-                        <RecipeCard key={recipe.idMeal} recipe={recipe} />
+                        <RecipeCard key={recipe.idMeal} recipe={recipe} className='card' />
                     ))
 
                     :
