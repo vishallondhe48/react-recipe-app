@@ -1,5 +1,5 @@
 @import "./colors.scss";
-
+@import "./fonts.scss";
 * {
   margin: 0;
   padding: 0;
@@ -8,14 +8,23 @@
 
 body {
   font-size: calc(10px + 2vmin);
+  font-family: $font-body;
 }
 
-.app-title {
-  font-size: 2em;
-  text-align: center;
-  padding: 1.5em 0;
-  text-transform: uppercase;
-}
 .container {
   margin: 0 5vw;
+}
+.links {
+  text-decoration: none;
+  color: #000;
+}
+
+.logo {
+  font-family: $font-logo;
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
+  padding: 2em 0;
+  color: #e70e02;
+  text-transform: uppercase;
 }

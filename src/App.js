@@ -12,7 +12,7 @@ function App() {
 
   return (
     <>
-      <h2 className='app-title'>React recipe app</h2>
+      <h2 className='logo'>React-recipe-app</h2>
       <Router>
         <Route path='/' exact component={Recipe} />
         <Route path='/:id' component={FoodRecipe} />
